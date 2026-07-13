@@ -1,4 +1,3 @@
-const geo = require('../../utils/geo');
 const { RESULT } = require('../../utils/constants');
 
 let currentAudio = null;
@@ -238,9 +237,7 @@ Page({
     setTimeout(() => {
       ctx.stopRecord({
         success(res) {
-          that.fetchLocation((location) => {
-            that.saveVideoAndRecord(res.tempVideoPath, result, location);
-          });
+          that.saveVideoAndRecord(res.tempVideoPath, result, null);
         },
         fail(err) {
           console.error('stopRecord fail', err);
@@ -249,22 +246,6 @@ Page({
         }
       });
     }, 3000);
-  },
-
-  // 获取当前定位（含逆地址解析）
-  fetchLocation(callback) {
-    wx.getLocation({
-      type: 'gcj02',
-      success(res) {
-        geo.reverseGeocode(res.latitude, res.longitude, (address) => {
-          callback({ lat: res.latitude, lng: res.longitude, address: address });
-        });
-      },
-      fail(err) {
-        console.error('获取定位失败', err);
-        callback(null);
-      }
-    });
   },
 
   // 保存视频到持久路径 -> 存入相册 -> 写入本地记录
