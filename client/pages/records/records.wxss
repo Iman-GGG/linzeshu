@@ -1,0 +1,153 @@
+/* pages/records/records.wxss */
+
+.header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.privacy-tip {
+  margin-bottom: 16px;
+  padding: 10px 12px;
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 8px;
+  border-left: 3px solid #1f8b4c;
+}
+
+.privacy-tip-text {
+  font-size: 12px;
+  color: #888;
+  line-height: 1.6;
+}
+
+.page-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.clear-btn {
+  font-size: 14px;
+  color: #e74c3c;
+  padding: 4px 8px;
+}
+
+/* 空状态 */
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 80px;
+}
+
+.empty-icon {
+  font-size: 48px;
+  margin-bottom: 16px;
+}
+
+.empty-text {
+  font-size: 16px;
+  color: #999;
+  margin-bottom: 8px;
+}
+
+.empty-tip {
+  font-size: 13px;
+  color: #666;
+}
+
+/* 记录列表 */
+.record-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.record-card {
+  background: #1a1a1a;
+  border-radius: 12px;
+  padding: 14px;
+}
+
+.record-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.record-time {
+  font-size: 12px;
+  color: #888;
+}
+
+.record-badge {
+  font-size: 12px;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 10px;
+}
+
+.record-badge.success {
+  background: #1f8b4c;
+  color: #fff;
+}
+
+.record-badge.failure {
+  background: #c0392b;
+  color: #fff;
+}
+
+.record-summary {
+  font-size: 14px;
+  color: #ccc;
+}
+
+.record-meta {
+  margin-top: 8px;
+  font-size: 12px;
+  color: #888;
+}
+
+.video-bar {
+  margin-top: 10px;
+  display: inline-block;
+  padding: 6px 14px;
+  background: #2a2a2a;
+  border-radius: 6px;
+}
+
+.video-bar-text {
+  font-size: 13px;
+  color: #4dabf7;
+}
+
+/* 视频播放器浮层 */
+.video-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.92);
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.video-player {
+  width: 100%;
+  height: 70vh;
+}
+
+.video-close {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 8px 24px;
+  border-radius: 20px;
+}

@@ -1,0 +1,5 @@
+node_modules/
+server/node_modules/
+project.private.config.json
+.env
+server/data/store.json

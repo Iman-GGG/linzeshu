@@ -1,0 +1,58 @@
+<view class="home-page">
+  <!-- 顶部背景图区域 -->
+  <view class="hero-bg">
+    <!-- 滚动通知条 -->
+    <view class="marquee-wrap">
+      <swiper class="marquee-swiper" vertical autoplay circular interval="3000" duration="800">
+        <swiper-item class="marquee-item" wx:for="{{marqueeList}}" wx:key="index">
+          <text class="marquee-text">{{item}}</text>
+        </swiper-item>
+      </swiper>
+    </view>
+    <image class="hero-img" src="/images/quokka.jpg" mode="widthFix"></image>
+    <view class="mouth-wrap" bindtap="playStopSmoking">
+      <image class="mouth-btn" src="/images/speaker_v2.png" mode="aspectFit"></image>
+      <view class="mouth-label">
+        <text class="mouth-line">这里禁止吸烟</text>
+        <text class="mouth-line">请您立即灭烟</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- 卡片区 -->
+  <view class="card-area">
+    <!-- 页面标题 -->
+    <text class="page-title">林则鼠</text>
+
+    <!-- 统计卡片 -->
+    <view class="stat-card">
+      <view class="stat-line">
+        <text class="stat-label">劝烟成功</text>
+        <text class="stat-num">{{successCount}}</text>
+        <text class="stat-unit">次</text>
+      </view>
+      <view class="stat-line">
+        <text class="stat-label">劝烟失败</text>
+        <text class="stat-num">{{failureCount}}</text>
+        <text class="stat-unit">次</text>
+      </view>
+    </view>
+
+    <!-- 左右两个功能卡片 -->
+    <view class="action-row">
+      <view class="action-card action-left" bindtap="goGuide">
+        <text class="action-text">劝烟前看看</text>
+      </view>
+      <view class="action-card action-right" bindtap="goCamera">
+        <text class="action-text">我要劝烟</text>
+      </view>
+    </view>
+
+    <!-- 底部卡片 -->
+    <view class="action-card action-bottom" bindtap="goRecords">
+      <text class="action-text">我的劝烟记录</text>
+    </view>
+
+    <view class="privacy-btn" bindtap="showPrivacy">隐私说明</view>
+  </view>
+</view>

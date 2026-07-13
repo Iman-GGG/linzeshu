@@ -1,0 +1,72 @@
+/* pages/camera/camera.wxss */
+.btn-white {
+  background: #ffffff;
+  color: #000000;
+  border: 1px solid #e0e0e0;
+}
+
+.btn-white.btn-disabled {
+  background: #f0f0f0;
+  color: #999999;
+  border-color: #d0d0d0;
+}
+
+.btn-gray {
+  background: #d1d1d6;
+  color: #000000;
+}
+
+.btn-danger {
+  background: #c0392b;
+  color: #fff;
+}
+
+.btn-cancel {
+  background: #ffffff;
+  color: #000000;
+  border: 1px solid #e0e0e0;
+}
+
+.camera-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.camera-actions .btn {
+  flex: 1;
+  margin: 0;
+}
+
+.btn-disabled-action {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.snapshot-btn {
+  position: absolute;
+  bottom: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 56px;
+  height: 56px;
+  background: #ffffff;
+  border-radius: 50%;
+  border: 4px solid rgba(255, 255, 255, 0.35);
+  z-index: 10;
+}
+
+.announce-bar {
+  margin-top: 12px;
+  padding: 12px 14px;
+  background: rgba(31, 139, 76, 0.15);
+  border-left: 4px solid #1f8b4c;
+  border-radius: 6px;
+}
+
+.announce-bar text {
+  color: #e6e6e6;
+  font-size: 14px;
+  line-height: 1.6;
+  word-break: break-all;
+}

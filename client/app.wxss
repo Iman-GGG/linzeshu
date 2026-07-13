@@ -1,0 +1,33 @@
+/* 全局暗黑主题样式 */
+page {
+  background-color: #0b0b0d;
+  color: #ffffff;
+}
+
+.container {
+  padding: 16px;
+}
+
+.card {
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  border-radius: 12px;
+  padding: 14px;
+  margin-bottom: 12px;
+  color: #e6e6e6;
+}
+
+.btn {
+  display: block;
+  margin: 8px 0;
+  padding: 12px;
+  background: #1f8b4c;
+  color: #fff;
+  text-align: center;
+  border-radius: 8px;
+}
+
+.muted { color: #9b9b9b }
+
+.title { font-size: 18px; color: #fff; font-weight: 700 }
+
+.small { font-size: 12px; color: #cfcfcf }

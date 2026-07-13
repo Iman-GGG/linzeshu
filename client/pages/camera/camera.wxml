@@ -1,0 +1,29 @@
+<view class="container">
+  <view>
+    <text style="font-size:18px;font-weight:700;">我要劝烟</text>
+  </view>
+  <view class="card">
+    <view style="margin-top:6px;">
+      <view class="btn btn-white {{showCamera || recording ? 'btn-disabled' : ''}}" bindtap="activateCamera">录像劝烟</view>
+      <view class="btn btn-gray" bindtap="secretReport">偷偷举报</view>
+    </view>
+    <view style="margin-top:12px;">
+      <text class="small muted">录制状态：</text>
+      <text style="margin-left:8px">{{recording ? '录制中' : '未录制'}}</text>
+    </view>
+  </view>
+
+  <view wx:if="{{announceText}}" class="announce-bar">
+    <text>{{announceText}}</text>
+  </view>
+
+  <view wx:if="{{showCamera}}" style="margin-top:12px; position:relative;">
+    <camera id="camera" device-position="back" binderror="onCameraError" bindstop="onCameraStop" style="width:100%; height:360px; border-radius:8px; overflow:hidden;"/>
+    <view wx:if="{{recording}}" class="snapshot-btn" bindtap="takeSnapshot"></view>
+    <view class="camera-actions">
+      <view class="btn {{finishing ? 'btn-disabled-action' : ''}}" bindtap="stopSuccess">成功且结束</view>
+      <view class="btn btn-cancel {{finishing ? 'btn-disabled-action' : ''}}" bindtap="cancelRecord">取消</view>
+      <view class="btn btn-danger {{finishing ? 'btn-disabled-action' : ''}}" bindtap="stopFailure">失败且结束</view>
+    </view>
+  </view>
+</view>

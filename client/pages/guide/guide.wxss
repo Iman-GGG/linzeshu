@@ -1,0 +1,138 @@
+/* pages/guide/guide.wxss */
+.page {
+  min-height: 100vh;
+  box-sizing: border-box;
+  background: #0b0b0d;
+  padding: 40px 20px 24px;
+}
+
+.header {
+  margin-bottom: 20px;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.btn-group {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.btn {
+  background: linear-gradient(135deg, #ecebf5, #e8e6f0);
+  border-radius: 12px;
+  padding: 14px;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 600;
+  color: #333;
+}
+
+.btn-active {
+  background: linear-gradient(135deg, #1f8b4c, #2aaa5a);
+  color: #fff;
+}
+
+/* 内容面板 */
+.panel {
+  max-height: 70vh;
+  background: #1a1a1a;
+  border-radius: 16px;
+  padding: 16px 16px 60px;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+/* 法规 */
+.law-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.law-title {
+  font-size: 17px;
+  font-weight: 700;
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.law-meta {
+  font-size: 11px;
+  color: #888;
+  line-height: 1.5;
+  margin-bottom: 16px;
+}
+
+.law-article {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.law-line {
+  font-size: 13px;
+  color: #ccc;
+  line-height: 1.7;
+  text-indent: 2em;
+  word-break: break-all;
+}
+
+/* 统计科普 & 教程通用 */
+.science-content,
+.tutorial-content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.section {
+  background: #252525;
+  border-radius: 12px;
+  padding: 14px;
+}
+
+.section-title {
+  display: block;
+  font-size: 15px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 8px;
+}
+
+.section-body {
+  font-size: 13px;
+  color: #bbb;
+  line-height: 1.7;
+  word-break: break-all;
+}
+
+.highlight {
+  border-left: 4px solid #e74c3c;
+}
+
+/* 来源 */
+.source-box {
+  border-top: 1px solid #333;
+  padding-top: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.source-text {
+  font-size: 12px;
+  color: #888;
+}
+
+.source-url {
+  font-size: 11px;
+  color: #5c9dff;
+  word-break: break-all;
+}

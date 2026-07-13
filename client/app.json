@@ -1,0 +1,34 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/guide/guide",
+    "pages/camera/camera",
+    "pages/records/records",
+    "pages/webview/webview"
+  ],
+  "window": {
+    "navigationBarTitleText": "林则鼠"
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "用于记录劝烟发生位置，辅助控烟热力地图数据上报"
+    },
+    "scope.camera": {
+      "desc": "用于劝烟取证时的音视频录制"
+    },
+    "scope.record": {
+      "desc": "用于劝烟取证时的音视频录制"
+    },
+    "scope.writePhotosAlbum": {
+      "desc": "用于保存劝烟取证照片和视频到相册"
+    }
+  },
+  "requiredPrivateInfos": [
+    "chooseLocation",
+    "getLocation",
+    "onLocationChange",
+    "startLocationUpdate",
+    "startLocationUpdateBackground"
+  ],
+  "__usePrivacyCheck__": true
+}

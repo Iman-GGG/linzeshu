@@ -1,0 +1,202 @@
+.home-page {
+  min-height: 100vh;
+  box-sizing: border-box;
+  background: #0b0b0d;
+  padding-bottom: 40px;
+  margin-top: -130px;
+}
+
+/* 顶部背景图区域 */
+.hero-bg {
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+/* 滚动通知条：绝对定位浮在 quokka 上方，顶部对齐 */
+.privacy-btn {
+  text-align: center;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.85);
+  margin-top: 16px;
+}
+
+.marquee-wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  z-index: 2;
+}
+
+.marquee-swiper {
+  height: 44px;
+  width: 100%;
+  background: transparent;
+}
+
+.marquee-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 44px;
+  background: transparent;
+}
+
+.marquee-text {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.75);
+  text-align: center;
+  padding: 0 20px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.hero-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.mouth-wrap {
+  position: absolute;
+  top: calc(60% - 10px);
+  left: calc(50% + 110px);
+  z-index: 3;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+}
+
+.mouth-btn {
+  width: 40px;
+  height: 40px;
+  animation: breathe 2s ease-in-out infinite;
+}
+
+.mouth-label {
+  display: flex;
+  flex-direction: column;
+  margin-left: 3px;
+}
+
+.mouth-line {
+  font-size: 14px;
+  color: #ffffff;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.6);
+  white-space: nowrap;
+  line-height: 1.4;
+  opacity: 0.6;
+}
+
+@keyframes breathe {
+  0%, 100% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.15);
+  }
+}
+
+/* 卡片区：叠在图片上方，整体下移 90px */
+.card-area {
+  padding: 0 20px 12px;
+  margin-top: -280rpx;
+  position: relative;
+  z-index: 2;
+  transform: translateY(90px);
+}
+
+/* 页面标题 */
+.page-title {
+  display: block;
+  text-align: center;
+  font-size: 36px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+/* 统计卡片 */
+.stat-card {
+  background: #f5f5f0;
+  border-radius: 20px;
+  padding: 24px;
+  margin-bottom: 16px;
+}
+
+.stat-line {
+  display: flex;
+  align-items: baseline;
+  margin-bottom: 10px;
+}
+
+.stat-line:last-child {
+  margin-bottom: 0;
+}
+
+.stat-label {
+  font-size: 15px;
+  color: #666;
+  margin-right: 10px;
+}
+
+.stat-num {
+  font-size: 32px;
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+.stat-unit {
+  font-size: 15px;
+  color: #666;
+  margin-left: 4px;
+}
+
+/* 功能卡片 */
+.action-row {
+  display: flex;
+  margin-bottom: 12px;
+}
+
+.action-card {
+  border-radius: 20px;
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+}
+
+.action-left {
+  flex: 1;
+  margin-right: 6px;
+  background: linear-gradient(135deg, #ecebf5, #e8e6f0);
+}
+
+.action-right {
+  flex: 1;
+  margin-left: 6px;
+  background: linear-gradient(135deg, #eaf5eb, #e6f0e6);
+}
+
+/* 底部卡片 */
+.action-bottom {
+  margin-top: 16px;
+  background: linear-gradient(135deg, #f5f0eb, #f0eae4);
+}
+
+.action-text {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+}

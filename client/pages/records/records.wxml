@@ -1,0 +1,48 @@
+<view class="container">
+  <view class="header-row">
+    <text class="page-title">我的劝烟记录</text>
+    <text wx:if="{{items.length > 0}}" class="clear-btn" bindtap="clearRecords">清空</text>
+  </view>
+
+  <view class="privacy-tip">
+    <text class="privacy-tip-text">为保护您的隐私，所有记录仅保存在手机本地，不会上传云端。卸载小程序或清理缓存后记录将丢失，建议定期截图备份。</text>
+  </view>
+
+  <!-- 视频播放器浮层 -->
+  <view wx:if="{{showVideo}}" class="video-overlay">
+    <video class="video-player" src="{{videoSrc}}" controls autoplay></video>
+    <view class="video-close" bindtap="closeVideo">关闭</view>
+  </view>
+
+  <!-- 空状态 -->
+  <view wx:if="{{items.length === 0}}" class="empty-state">
+    <text class="empty-icon">📋</text>
+    <text class="empty-text">暂无劝烟记录</text>
+    <text class="empty-tip">点击"我要劝烟"开始第一次劝阻吧</text>
+  </view>
+
+  <!-- 记录列表 -->
+  <view wx:else class="record-list">
+    <block wx:for="{{items}}" wx:key="record_id" wx:for-item="item">
+      <view class="record-card">
+        <view class="record-header">
+          <view class="record-time">{{item.displayTime}}</view>
+          <view class="record-badge {{item.result}}">
+            {{item.result === 'success' ? '成功' : '失败'}}
+          </view>
+        </view>
+        <view class="record-summary">{{item.summary}}</view>
+        <view wx:if="{{item.address}}" class="record-meta">
+          <text class="meta-text">位置: {{item.address}}</text>
+        </view>
+        <view wx:elif="{{item.coordText}}" class="record-meta">
+          <text class="meta-text">位置: {{item.coordText}}</text>
+        </view>
+
+        <view wx:if="{{item.videoPath}}" class="video-bar" bindtap="playVideo" data-src="{{item.videoPath}}">
+          <text class="video-bar-text">回放</text>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>
