@@ -104,12 +104,15 @@ Mock API 使用本地 JSON 文件作为开发数据存储，不适合生产环�
 
 - [产品需求文档](PRD.md)
 - [技术方案](SPEC.md)
+- [公开路线图](ROADMAP.md)
+- [参与贡献](CONTRIBUTING.md)
+- [安全政策](SECURITY.md)
 - [客户端说明](client/README.md)
 - [Mock API 说明](server/README.md)
 
 ## 参与贡献
 
-项目正在完善贡献流程。在提交较大改动前，建议先创建 Issue 说明使用场景、范围和隐私影响。健康或法规相关内容应提供可靠来源，并经过人工核对。
+欢迎通过 Issue 和 Pull Request 参与项目。在提交较大改动前，请先创建 Issue 说明使用场景、范围和隐私影响，并阅读 [CONTRIBUTING.md](CONTRIBUTING.md)。健康或法规相关内容应提供可靠来源，并经过人工核对。
 
 ## 维护者
 
